@@ -1,4 +1,7 @@
 # coding: utf-8
+
+# pip3 install scikit-learn
+
 import sys
 sys.path.append('..')
 import numpy as np
@@ -31,3 +34,10 @@ word_vecs = U[:, :wordvec_size]
 querys = ['you', 'year', 'car', 'toyota']
 for query in querys:
     most_similar(query, word_to_id, id_to_word, word_vecs, top=5)
+
+
+# 为了执行 SVD，我们使用了 sklearn 的 randomized_svd() 方法。 该方法通过使用了随机数的 Truncated SVD，仅对奇异值较大的部分进行 计算，计算速度比常规的 SVD 快。剩
+# 因为使用了随机数，所以在使用 Truncated SVD 的情况下，每次的结果都不一样
+
+# 使用语料库，计算上下文中的单词数量，将它们转化 PPMI 矩阵，再基于 SVD 降维 获得好的单词向量。这就是单词的分布式表示，每个单词表示为固定长度的 密集向量。
+
