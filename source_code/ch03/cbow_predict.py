@@ -24,3 +24,5 @@ h1 = in_layer1.forward(c1)
 h = 0.5 * (h0 + h1)
 s = out_layer.forward(h)
 print(s)
+
+# CBOW 模型的推理(即求得分的过程)
