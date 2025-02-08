@@ -30,3 +30,9 @@ trainer = RnnlmTrainer(model, optimizer)
 
 trainer.fit(xs, ts, max_epoch, batch_size, time_size)
 trainer.plot()
+
+
+# 按顺序生成 mini-batch 
+# • 调用模型的正向传播和反向传播 
+# • 使用优化器更新权重 
+# • 评价困惑度
