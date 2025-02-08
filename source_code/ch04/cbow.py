@@ -45,3 +45,5 @@ class CBOW:
         for layer in self.in_layers:
             layer.backward(dout)
         return None
+
+# CBOW 模型的实现

@@ -51,3 +51,6 @@ params['id_to_word'] = id_to_word
 pkl_file = 'cbow_params.pkl'  # or 'skipgram_params.pkl'
 with open(pkl_file, 'wb') as f:
     pickle.dump(params, f, -1)
+
+
+# CBOW 模型的学习代码
