@@ -23,3 +23,4 @@ word_ids = model.generate(start_id, skip_ids)
 txt = ' '.join([id_to_word[i] for i in word_ids])
 txt = txt.replace(' <eos>', '.\n')
 print(txt)
+
